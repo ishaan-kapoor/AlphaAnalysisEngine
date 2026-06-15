@@ -1,0 +1,17 @@
+{
+  "symbols": ["AAPL", "MSFT"],
+  "alphas": [
+    { "source": "top_book" },
+    { "source": "smoothed_imbalance" },
+    { "source": "fair_price", "params": { "decay": 0.5, "levels": 7 } },
+    { "source": "price", "params": { "mode": 2 }, "name": "last_trade_px" }
+  ],
+  "samplingRate": 10,
+  "leads": [
+    { "source": "last_trade_px", "channel": "price", "delayTicks": 5 },
+    { "source": "fair_price", "delayNs": 1000000000, "transform": "return", "name": "fair_price_ret_1s" }
+  ],
+  "startTime": "09:00:00:000000000",
+  "endTime": "09:30:00:000000000",
+  "output": "out/<datetime>"
+}

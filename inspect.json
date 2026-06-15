@@ -1,0 +1,13 @@
+{
+  "symbols": ["AAPL"],
+  "alphas": [
+    { "source": "top_book" }
+  ],
+  "samplingRate": 100,
+  "startTime": "04:30:00:000000000",
+  "endTime": "04:31:00:000000000",
+  "rawFeed": true,
+  "orderBook": true,
+  "orderBookDepth": 10,
+  "output": "out/<datetime>"
+}
